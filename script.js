@@ -25,5 +25,13 @@ function renderTask(){
         </td>
         `;
         TaskInput.appendChild(row);
-    }).join();
+    });
+}
+
+function editTask(index){
+    const newTask=prompt('enter a new task:',tasks[index].task);
+    if(tasks !== null){
+        tasks[index].task = newTask.trim();
+        renderTask();
+    }
 }
